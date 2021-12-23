@@ -14,8 +14,6 @@ public class FileLogger implements Logger
             if (logs.exists()) { logs.delete(); } //if the file exists, delete it
         }
         catch (Exception e) { e.printStackTrace(); }
-
-
     }
 
     @Override
