@@ -3,14 +3,12 @@ import java.util.Scanner;
 
 public class Mapping
 {
-
     public static final int INITIAL_LOCATION = 95;
 
     static LocationMap locMap = new LocationMap();
     private final HashMap<String, String> vocab = new HashMap<>();
     private final FileLogger flog = new FileLogger();
     private final ConsoleLogger clog = new ConsoleLogger();
-
 
     public Mapping()
     {
@@ -24,7 +22,6 @@ public class Mapping
 
     public void mapping()
     {
-
         Scanner scan = new Scanner(System.in); //create a Scanner object
         int location = INITIAL_LOCATION; //initialize a location variable with the INITIAL_LOCATION
 
