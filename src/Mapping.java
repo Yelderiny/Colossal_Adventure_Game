@@ -22,7 +22,7 @@ public class Mapping
 
     public void mapping()
     {
-        Scanner scan = new Scanner(System.in); //create a Scanner object
+        var scan = new Scanner(System.in); //create a Scanner object
         int location = INITIAL_LOCATION; //initialize a location variable with the INITIAL_LOCATION
 
         while (true)
@@ -38,7 +38,7 @@ public class Mapping
             HashMap<String, Integer> exits = (HashMap<String, Integer>) curLoc.getExits(); //get a map of the exits for the location
 
             //build available exits string
-            StringBuilder availExits = new StringBuilder("Available exits are ");
+            var availExits = new StringBuilder("Available exits are ");
             exits.keySet().forEach(exit -> availExits.append(exit).append(", "));
 
             //log the available exits
@@ -108,7 +108,7 @@ public class Mapping
 
     public static void main(String[] args)
     {
-        Mapping m = new Mapping();
+        var m = new Mapping();
         m.mapping();
     }
 }

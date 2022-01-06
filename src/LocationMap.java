@@ -10,10 +10,10 @@ public class LocationMap implements Map<Integer, Location>
 
     static
     {
-        FileLogger flog = new FileLogger();
-        ConsoleLogger clog = new ConsoleLogger();
+        var flog = new FileLogger();
+        var clog = new ConsoleLogger();
 
-        File locFile = new File(LOCATIONS_FILE_NAME);
+        var locFile = new File(LOCATIONS_FILE_NAME);
 
         try (BufferedReader reader = new BufferedReader(new FileReader(locFile)))
         {
@@ -33,14 +33,14 @@ public class LocationMap implements Map<Integer, Location>
                 flog.log(line);
                 clog.log(line);
 
-                Location loc = new Location(id, description, new HashMap<>()); //create a Location object
+                var loc = new Location(id, description, new HashMap<>()); //create a Location object
 
                 locations.put(id, loc); //add object to locations hashmap
             }
         }
         catch (IOException e) { e.printStackTrace(); }
 
-        File dirFile = new File(DIRECTIONS_FILE_NAME);
+        var dirFile = new File(DIRECTIONS_FILE_NAME);
 
         try (BufferedReader reader = new BufferedReader(new FileReader(dirFile)))
         {

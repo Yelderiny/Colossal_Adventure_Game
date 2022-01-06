@@ -10,7 +10,7 @@ public class FileLogger implements Logger
     {
         try
         {
-            File logs = new File(FILE_LOGGER_NAME); //new file object
+            var logs = new File(FILE_LOGGER_NAME); //new file object
             if (logs.exists()) { logs.delete(); } //if the file exists, delete it
         }
         catch (Exception e) { e.printStackTrace(); }
@@ -19,7 +19,7 @@ public class FileLogger implements Logger
     @Override
     public void log (String message)
     {
-        try (FileWriter writer = new FileWriter(FILE_LOGGER_NAME, true)) { writer.append(message).append("\n"); }
+        try (var writer = new FileWriter(FILE_LOGGER_NAME, true)) { writer.append(message).append("\n"); }
         catch (IOException e) { e.printStackTrace(); }
     }
 }
